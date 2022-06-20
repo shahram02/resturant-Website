@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,8 +10,56 @@
     crossorigin="anonymous" 
     referrerpolicy="no-referrer" />
     <title>Burger Website</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <!-- Header -->
+    <header class="header">
+        <a href="#home" class="logo__website">پیتزا فروشی</a>
+        <nav class="menu__header">
+            <a href="#home">خانه</a>
+            <a href="#service">خدمات</a>
+            <a href="#about">درباره</a>
+            <a href="#chefies">سر آشپزها</a>
+            <a href="#contact">ارتباط با</a>
+        </nav>
+
+        
+        <div class="icons">
+            <i class="fa-solid fa-magnifying-glass" id="search-btn"></i>
+            <i class="fa-solid fa-cart-shopping" id="cart-btn"></i>
+            <i class="fa-solid fa-bars" id="bars-btn"></i>
+        </div>
+
+        <div class="serach__header">
+            <input type="search" id="search-box" placeholder="غذاها رو سرچ کن">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+
+
+        <div class="shopping-modal">
+            <div class="item">
+                <span class="fas fa-times"></span>
+                <img src="./assets/img/ryan-concepcion-w_z0RJCSBiE-unsplash.jpg" alt="">
+                <div class="content">
+                    <h3>محصول شماره یک</h3>
+                    <div class="price">45000</div>
+                </div>
+            </div>
+    
+            <div class="item">
+                <span class="fas fa-times"></span>
+                <img src="./assets/img/ryan-concepcion-w_z0RJCSBiE-unsplash.jpg" alt="">
+                <div class="content">
+                    <h3>تنمتنتمتنک</h3>
+                    <div class="price">89000</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+
 
 <script src="./js/index.js"></script>
 </body>

@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('../css/styleFonts.css');
+
+/* Reset Code */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all .2s linear;
+    font-family: 'Dancing Script', cursive;
+    font-family: "Bziba";
+    font-style: italic;
+}
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+/* Variables */
+:root {
+    --min-white: #fff;
+    --primary-color: #ffbe33;
+    --bg-color: #222831;
+    --secondary-color: #18181B;
+}
+
+
+/* Header */
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .logo__website {
+    color: var(--secondary-color);
+    font-size: 3rem;
+}
+
+.header .menu__header a{
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+    margin: 0 1rem;
+}
+
+.header .menu__header a:hover {
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.header .icons i{
+    color: var(--secondary-color);
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin:  0 3.;
+}
+
+.header .icons i:hover {
+    color: var(--primary-color);
+}
+
+#bars-btn{
+    display: none;
+}
+
+.header .serach__header {
+    position: absolute;
+    top: 100%;
+    right: 7%;
+    width: 35%;
+    background-color: var(--min-white);
+    box-shadow: .5rem .5rem  .5rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    font-size: 3rem;
+}
+
+.header .serach__header.active{
+    transform: scaleY(1);
+}
+
+.header .serach__header input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    padding: .4rem;
+}
+
+.header .serach__header label {
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: .4rem;
+    color: var(--secondary-color);
+}
+
+.header .serach__header label:hover{
+    color: var(--primary-color);
+}
+
+.header .shopping-modal{
+    position: absolute;
+    top: 110%;
+    right: -200%;
+    background-color: var(--bg-color);
+    padding:  0 1.5rem;
+    width: 40%;
+    box-shadow: 0 .5rem  .2rem rgba(0, 0, 0, 0.2);
+}
+.header .shopping-modal.active {
+    right: 5%;
+}
+
+.header .shopping-modal .item{
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.header .shopping-modal .item .fa-times{
+    position: absolute;
+    top: 1rem;
+    left: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+.header .shopping-modal .item .fa-times:hover{
+    color: var(--primary-color);
+}
+
+.header .shopping-modal .item img{
+    height: 5rem;
+}
+
+.header .shopping-modal .item h3 {
+    font-size: 1.8rem;
+    padding-bottom: .5rem;
+    color: var(--secondary-color);
+}
+
+
+
+
+
+.header .shopping-modal .item .price {
+    font-size: 2.3rem;
+    color: var(--secondary-color);
+}
+
+
+
+
+
+
+
+/* Media Query  */
+@media (max-width:650px) {
+    #bars-btn{
+        display: inline-block;
+    }
+
+    .header .menu__header {
+        position: fixed;
+        left: 0;
+        top: -100rem;
+        background-color: var(--bg-color);
+        width: 100%;
+        text-align: center;
+
+    }
+    .header .menu__header.active{
+        top: 7rem;
+    }
+    .header .menu__header a{
+        display: block;
+        margin: .5rem 0;
+        padding: 1rem 0;
+        font-size: 2rem;
+    }
+}
+
