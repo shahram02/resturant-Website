@@ -28,6 +28,10 @@ html {
     --secondary-color: #ffffff;
 }
 
+body{
+    background-color: #eee;    
+}
+
 /* btns */
 .btn{
     display: inline-block;
@@ -70,6 +74,7 @@ section{
     left: 0;
     right: 0;
     z-index: 1000;
+    padding: 0 2rem;
 }
 
 .header .logo__website {
@@ -281,6 +286,230 @@ section{
     font-size: 2rem;
 }
 
+/* menu */
+.menu .row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30%,1fr));
+    gap: 1rem;
+}
+
+.menu .row .colm{
+    background-color: var(--bg-color);
+}
+
+.menu .row .colm .images{
+    width: 100%;
+    height: 35rem;
+    border-bottom-right-radius: 4rem;
+    background-color: #eee;
+    overflow: hidden;
+}
+
+.menu .row .colm .images img{
+    width: 100%;
+    object-fit: cover;
+    padding: 3rem;
+}
+
+.menu .row .colm .content{
+    color: var(--secondary-color);
+    padding: 3rem;
+}
+
+.menu .row .colm .content h3{
+    font-size: 3rem;
+    margin: 0.8rem;
+}
+
+.menu .row .colm .content p{
+    font-size: 1.6rem;
+    margin: 0.8rem;
+}
+
+.menu .row .colm .content .price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu .row .colm .content .price span{
+    font-size: 1.6rem;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.menu .row .colm:hover .images img {
+    transform: scale(1.1);
+}
+
+.menu .row .colm .content .price span:hover{
+    background: none;
+}
+
+/* chef */
+.chefies .row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30%,1fr));
+    gap: 1rem;
+}
+
+.chefies .row .box{
+    position: relative;
+}
+
+
+.chefies .row .box  img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.chefies .row .box:hover::before{
+    content: "";
+    top: 0; right: 0; left: 0; bottom: 0;
+    background-color: rgba(8, 0, 0, 0.5);
+    position: absolute;
+}
+
+.chefies .row .box .content{
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    opacity: 0;
+}
+.chefies .row .box:hover .content{
+    opacity: 1;
+}
+
+.chefies .row .box .content h3{
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin: .5rem 0;
+    text-align: center;
+}
+
+.chefies .row .box .content .social i{
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+    margin: .5rem 0;
+}
+
+.chefies .row .box .content .social i:hover{
+    color: var(--primary-color);
+}
+
+/* concat */
+.contact .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact .row form{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .row .form input,textarea{
+    background-color: var(--secondary-color);
+    border: 0.1rem solid rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    height: 4.5rem;
+    margin: .7rem 0;
+    font-size: 1.9rem;
+    width: 100%;
+}
+
+.contact .row .form input[type="submit"] {
+    cursor: pointer;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    border: .1rem solid var(--primary-color);
+    color: #000;
+    background-color: var(--primary-color);
+    height: 6rem;
+
+}
+
+.contact .row .form input[type="submit"]:hover {
+    background: none;
+    color: var(--primary-color);
+}
+
+.contact .row .form textarea {
+    height: 25rem;
+    padding: 1rem;
+    min-width: 100%;
+    max-width: 100%;
+    padding-bottom: .5rem;
+}
+.contact .row .iframe {
+    width: 100%;
+}
+.contact .row .form {
+    width: 100%;
+}
+
+.contact .row .iframe iframe {
+    width: 100%;
+    height: 12rem;
+}
+
+/* footer */
+footer{
+    background-color: var(--bg-color);
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20%,1fr));
+    gap: 2rem;
+    text-align: center;
+    padding: 3rem;
+}
+
+footer h3{
+    font-size: 5rem;
+    color: var(--primary-color);
+    margin: 1rem 0;
+}
+
+footer a{
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin: 1rem 0;
+    display: block;
+}
+footer a:hover,
+footer i:hover{
+    color: var(--primary-color);
+}
+
+footer i,
+footer span,
+footer p
+{
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin: 1rem 0;
+    display: block;
+}
+footer i {
+    margin: 1rem .5rem;
+}
+
+footer h4{
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: .8rem;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -316,6 +545,18 @@ section{
 
     .about .row{
         grid-template-columns: repeat(auto-fit,minmax(100%,1fr));
-}
+    }
+    .menu .row{
+        grid-template-columns: repeat(auto-fit,minmax(100%,1fr));
+    }
+    .menu .row .colm .images{
+        height: 65%;
+    }
+    .chefies .row{
+        grid-template-columns: repeat(auto-fit,minmax(100%,1fr));
+    }
+    footer{
 
+        grid-template-columns: repeat(auto-fit,minmax(100%,1fr));
+    }
 }
